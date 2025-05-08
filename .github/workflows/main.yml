@@ -16,7 +16,7 @@ jobs:
   # Run your local code from VM
   - name: checkout Runner
     uses: actions/checkout@v2
- # Node JS version
+  # Node JS version
   - name: Set up Node.js
     uses: actions/setup-node@v2
     with:
@@ -30,9 +30,15 @@ jobs:
      restore-keys: |
       ${{ runner.os }}-node-
       ${{ runner.os }}-
- # Install Dependencies
+  # Install Dependencies
   - name: Install dependencies
     run: npm install
+  # Install Chrome for headless mode
+  - name: Install Chrome
+    run: |
+     sudo apt-get update
+     sudo apt-get install -y google-chrome-stable
+    
  # Run Tests
   - name: Run tests
     run: npm test
