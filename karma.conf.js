@@ -23,7 +23,8 @@ module.exports = function(config) {
         flags: [
           '--no-sandbox',
           '--disable-gpu',
-          '--disable-dev-shm-usage'
+          '--disable-dev-shm-usage',
+          '--remote-debugging-port=9222'  // Viktigt för att köra utan grafiskt gränssnitt
         ]
       }
     },
