@@ -1,7 +1,7 @@
 module.exports = function(config) {
   config.set({
     // Använd Jasmine som testframework
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine'], 
 
     // Filer som Karma ska läsa in och köra tester på
     files: [
@@ -24,7 +24,9 @@ module.exports = function(config) {
           '--no-sandbox',
           '--disable-gpu',
           '--disable-dev-shm-usage',
-          '--remote-debugging-port=9222'  // Viktigt för att köra utan grafiskt gränssnitt
+          '--remote-debugging-port=9222',  // Viktigt för att köra utan grafiskt gränssnitt
+          '--headless',  // Se till att köras utan GUI
+          '--disable-software-rasterizer',  // Lägg till flagga för att förhindra rasterizer-problem
         ]
       }
     },
