@@ -78,8 +78,8 @@ describe("Component tests", () => {
     expect(component.bs).toBe(ButtonState.Clicked);
   });
 
-  it("failed test?", () => {
+  /*it("failed test?", () => {
     
     expect(1+1).toBe(3);
-  });
+  });*/
 })
