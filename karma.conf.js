@@ -14,22 +14,8 @@ module.exports = function(config) {
     },
 
     // Webbläsare som Karma ska köra tester i
-    browsers: ['ChromeHeadless'],  // Chrome i headless-läge (utan GUI)
+    browsers: ['FirefoxHeadless'],  // Chrome i headless-läge (utan GUI)
 
-    // Konfiguration av webbläsaren (ChromeHeadless)
-    customLaunchers: {
-      ChromeHeadless: {
-        base: 'ChromeHeadless',
-        flags: [
-          '--no-sandbox',
-          '--disable-gpu',
-          '--disable-dev-shm-usage',
-          '--remote-debugging-port=9222',  // Viktigt för att köra utan grafiskt gränssnitt
-          '--headless',  // Se till att köras utan GUI
-          '--disable-software-rasterizer',  // Lägg till flagga för att förhindra rasterizer-problem
-        ]
-      }
-    },
 
     // Rapportformat
     reporters: ['progress'],  // Visar en progressindikator under körning
