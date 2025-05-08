@@ -77,4 +77,9 @@ describe("Component tests", () => {
     fixture.detectChanges();
     expect(component.bs).toBe(ButtonState.Clicked);
   });
+
+  it("failed test?", () => {
+    
+    expect(1+1).toBe(3);
+  });
 })
