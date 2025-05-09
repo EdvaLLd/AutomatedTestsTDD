@@ -42,4 +42,4 @@ jobs:
 
      # Run Tests
      - name: Run tests
-       run: npm test
+       run: ng test
